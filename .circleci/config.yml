@@ -13,6 +13,6 @@ workflows:
   build_flow:
     jobs:
       - build:
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
