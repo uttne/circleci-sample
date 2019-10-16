@@ -8,3 +8,12 @@ jobs:
       - run: find .
       - run: dotnet build ./sample.tests/sample.tests.csproj
       - run: dotnet test --no-build ./sample.tests/sample.tests.csproj
+
+workflows:
+  version: 2
+  build-flow:
+    jobs:
+      - build:
+        filters:
+          branches:
+            only: master
